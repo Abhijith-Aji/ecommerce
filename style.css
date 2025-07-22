@@ -1,0 +1,18 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; line-height: 1.6; padding: 1rem; }
+.navbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.products-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.card { border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.card img { width: 100%; display: block; }
+.card-body { padding: 0.5rem 1rem; }
+.card-body h3 { margin: 0.5rem 0; }
+.card-body p.price { color: #b12704; font-weight: bold; margin: 0.5rem 0; }
+.card-body p.desc { font-size: 0.9rem; color: #555; }
+.card-body button { background: #0070f3; color: #fff; border: none; padding: 0.5rem; width: 100%; border-radius: 4px; cursor: pointer; }
+.card-body button:hover { background: #005bb5; }
+.toast {
+  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+  padding: 0.75rem 1.25rem; background: rgba(0,0,0,0.8); color: #fff;
+  border-radius: 4px; opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+}
+.toast.show { opacity: 1; pointer-events: auto; }
